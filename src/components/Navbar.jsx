@@ -156,7 +156,6 @@ const MobileMenu = styled.ul`
 const sections = [
   { id: 'hero', name: 'About', href: '#hero' },
   { id: 'Skills', name: 'Skills', href: '#Skills' },
-  { id: 'Experience', name: 'Experience', href: '#Experience' },
   { id: 'Projects', name: 'Projects', href: '#Projects' },
   { id: 'Education', name: 'Education', href: '#Education' },
   { id: 'contact', name: 'Contact', href: '#contact' },
