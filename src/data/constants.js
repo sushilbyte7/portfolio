@@ -151,6 +151,26 @@ export const education = [
 export const projects = [
   {
     id: 0,
+    title: "A2A Job Team",
+    date: "2026",
+    description:
+      "A two-agent job-hunting system built on the A2A protocol: Scout (LangGraph) finds and filters fresher jobs, Scribe (plain Python + Gemini) tailors the application, and a Coordinator runs the handoff between them, streamed live in a React trace UI. The agents discover each other via Agent Cards, run entirely on free tiers, and returned 5 real leads on their first test run for web developer roles in Patna.",
+    image:
+      "https://opengraph.githubassets.com/1/sushilbyte7/a2a-job-team",
+    tags: [
+      "Python",
+      "LangGraph",
+      "A2A Protocol",
+      "Google Gemini",
+      "FastAPI",
+      "React",
+    ],
+    category: "web app",
+    github: "https://github.com/sushilbyte7/a2a-job-team",
+    webapp: "",
+  },
+  {
+    id: 1,
     title: "ServeEase",
     date: "2026",
     description:
@@ -171,20 +191,22 @@ export const projects = [
     webapp: "",
   },
   {
-    id: 1,
+    id: 2,
     title: "Apex Bike Rental System",
     date: "2024",
     description:
       "A web-based bike rental platform built as my BCA final-year project. Users can browse and search bikes, view details and book a rental, while an admin panel manages vehicles, brands, bookings and registered users.",
+    // Opengraph fallback: the repo's front-image.jpg is not uploaded yet, so the
+    // raw image URL 404s. Swap back to the raw URL once the images are uploaded.
     image:
-      "https://raw.githubusercontent.com/sushilbyte7/apex-bike-rental-system/main/assets/images/front-image.jpg",
+      "https://opengraph.githubassets.com/1/sushilbyte7/apex-bike-rental-system",
     tags: ["HTML", "CSS", "JavaScript", "PHP", "MySQL", "Bootstrap"],
     category: "web app",
     github: "https://github.com/sushilbyte7/apex-bike-rental-system",
     webapp: "",
   },
   {
-    id: 2,
+    id: 3,
     title: "Reels Subtitle Generator",
     date: "2026",
     description:
@@ -197,7 +219,7 @@ export const projects = [
     webapp: "",
   },
   {
-    id: 3,
+    id: 4,
     title: "College WiFi Auto-Login",
     date: "2025",
     description:
