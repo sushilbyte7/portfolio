@@ -40,8 +40,8 @@ function App() {
   return (
     <ThemeProvider theme={darkTheme}>
       <BrowserRouter>
-        <Navbar />
         <Body>
+          <Navbar />
           <div style={{ width: '100%', height: '100vh', position: 'fixed', top: 0, left: 0, zIndex: -1 }}>
             <Galaxy
               mouseRepulsion={true}

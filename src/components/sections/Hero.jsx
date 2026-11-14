@@ -131,15 +131,14 @@ const SubTitle = styled.div`
 `;
 
 const ResumeButton = styled.a`
-  -webkit-appearance: button;
-  -moz-appearance: button;
-  appearance: button;
   text-decoration: none;
-
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
   width: 95%;
-  max-width: 300px;
-  text-align: center;
-  padding: 16px 0;
+  max-width: 260px;
+  padding: 16px 32px;
+  cursor: pointer;
 
   background: hsla(271, 100%, 50%, 1);
   background: linear-gradient(
@@ -147,34 +146,24 @@ const ResumeButton = styled.a`
     hsla(271, 100%, 50%, 1) 0%,
     hsla(294, 100%, 50%, 1) 100%
   );
-  background: -moz-linear-gradient(
-    225deg,
-    hsla(271, 100%, 50%, 1) 0%,
-    hsla(294, 100%, 50%, 1) 100%
-  );
-  background: -webkit-linear-gradient(
-    225deg,
-    hsla(271, 100%, 50%, 1) 0%,
-    hsla(294, 100%, 50%, 1) 100%
-  );
-  box-shadow: 20px 20px 60px #1f2634, -20px -20px 60px #1f2634;
+  box-shadow: 0 0 24px rgba(133, 76, 230, 0.5);
   border-radius: 50px;
   font-weight: 600;
-  font-size: 20px;
+  font-size: 18px;
+  color: white;
+  transition: all 0.3s ease-in-out;
 
-     &:hover {
-        transform: scale(1.05);
-    transition: all 0.4s ease-in-out;
-    box-shadow:  20px 20px 60px #1F2634,
-    filter: brightness(1);
-    }    
-    
-    
-    @media (max-width: 640px) {
-        padding: 12px 0;
-        font-size: 18px;
-    } 
-    color: white;
+  &:hover {
+    transform: scale(1.04);
+    box-shadow: 0 0 32px rgba(133, 76, 230, 0.7);
+    filter: brightness(1.1);
+  }
+
+  @media (max-width: 640px) {
+    padding: 12px 24px;
+    font-size: 16px;
+    max-width: 220px;
+  }
 `;
 
 const Img = styled.img`
@@ -249,7 +238,7 @@ const Hero = () => {
                 <SubTitle>{Bio.description}</SubTitle>
               </motion.div>
 
-              <ResumeButton href={Bio.resume} target="_blank">
+              <ResumeButton href={Bio.resume} target="_blank" rel="noopener noreferrer">
                 Check Resume
               </ResumeButton>
             </HeroLeftContainer>

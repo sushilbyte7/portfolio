@@ -1,0 +1,78 @@
+.portfolio-navbar {
+  position: fixed;
+  top: 16px;
+  left: 0;
+  right: 0;
+  z-index: 1000;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 0 24px;
+  pointer-events: none;
+}
+
+.portfolio-navbar-inner {
+  width: 100%;
+  max-width: 1680px;
+  height: 56px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 0 24px;
+  border-radius: 18px;
+  border: 1px solid transparent;
+  background: transparent;
+  backdrop-filter: none;
+  -webkit-backdrop-filter: none;
+  box-shadow: none;
+  transition:
+    max-width 0.5s ease,
+    background 0.5s ease,
+    border-color 0.5s ease,
+    box-shadow 0.5s ease,
+    padding 0.5s ease;
+  pointer-events: auto;
+  position: relative;
+  box-sizing: border-box;
+}
+
+.portfolio-navbar.navbar-scrolled .portfolio-navbar-inner {
+  max-width: calc(1300px - 24px);
+  background: rgba(10, 10, 20, 0.90);
+  backdrop-filter: blur(20px);
+  -webkit-backdrop-filter: blur(20px);
+  border-color: rgba(255, 255, 255, 0.10);
+  box-shadow:
+    0 8px 32px rgba(0, 0, 0, 0.35),
+    inset 0 0.5px 0 rgba(255, 255, 255, 0.08);
+  padding: 0 20px;
+}
+
+@media (max-width: 768px) {
+  .portfolio-navbar {
+    top: 12px;
+    padding: 0 12px;
+  }
+
+  .portfolio-navbar-inner {
+    height: 54px;
+    padding: 0 16px;
+    border-radius: 16px;
+  }
+
+  .portfolio-navbar.navbar-scrolled .portfolio-navbar-inner {
+    max-width: 100%;
+    padding: 0 14px;
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .portfolio-navbar-inner {
+    transition:
+      max-width 0.5s ease,
+      background 0.5s ease,
+      border-color 0.5s ease,
+      box-shadow 0.5s ease,
+      padding 0.5s ease;
+  }
+}
